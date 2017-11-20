@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ALLDOC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">Pesquisa de Satisfação</h1>
+							<p>Área Administrativa</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
+								<li><a href="#relatorio" id="relatorio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Relatório Geral</span></a></li>
+								<li><a href="#empresa" id="empresa-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Relatório Por Empresa</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Relatório por email</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">			
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Home -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Bem vindo(a)!</h2>
+								<p>Este é o painel administrativo de resultados da pesquisa de Satisfaçao Alldoc<br />
+								Use o menu lateral esquerdo de acordo com sua opção desejada.</p>
+							</header>
+
+						
+
+						</div>
+					</section>
+
+				<!-- Relatorio Geral -->
+					<section id="relatorio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Relatório Geral</h2>
+							</header>
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)">
+										<label for="dataInicio">Data Inicio</label>
+										<input 
+											id="dinicio" 
+											type="date" 
+											value="<?php echo (isset($_POST['data1']))?$_POST['data1']:'';?>" 
+											name ="data1" 
+											required> 
+									</div>
+									<div class="6u$ 12u$(mobile)">
+										<label for="dataFim">Data fim</label>
+										<input 
+											id="dfim" 
+											class="form-control" 
+											type="date" 
+											name ="data2" 
+											placeholder="Data Fim" 
+											value="<?php echo (isset($_POST['data2']))?$_POST['data2']:'';?>" 
+											required> 
+									</div>
+									<div class="12u$">
+										<label for="relatorio">Relatório</label>
+											<select class="form-control" id="options" name= "rel" onchange="optionCheck()" required>
+												<option  value="0" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '0') ? ' selected' : ''; ?>>Selecione alguma das opções</option>
+												<option  value="1" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '1') ? ' selected' : ''; ?>>Relatório Geral</option>
+												<option  value="2" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '2') ? ' selected' : ''; ?>>Relatório por Empresa</option>
+												<option  value="3" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '3') ? ' selected' : ''; ?>>Relatório por E-mail</option>
+											</select>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Gerar Relatório" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+				<!-- Relatorio Por Empresa -->
+					<section id="empresa" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Relatório por empresa</h2>
+							</header>
+							<form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)">
+										<label for="dataInicio">Data Inicio</label>
+										<input 
+											id="dinicio" 
+											type="date" 
+											value="<?php echo (isset($_POST['data1']))?$_POST['data1']:'';?>" 
+											name ="data1" 
+											required> 
+									</div>
+									<div class="6u$ 12u$(mobile)">
+										<label for="dataFim">Data fim</label>
+										<input 
+											id="dfim" 
+											class="form-control" 
+											type="date" 
+											name ="data2" 
+											placeholder="Data Fim" 
+											value="<?php echo (isset($_POST['data2']))?$_POST['data2']:'';?>" 
+											required> 
+									</div>
+									<div class="12u$">
+										<label for="relatorio">Empresa</label>
+											<select class="form-control" id="options" name= "rel" onchange="optionCheck()" required>
+												<option  value="0" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '0') ? ' selected' : ''; ?>>Selecione alguma das opções</option>
+												<option  value="1" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '1') ? ' selected' : ''; ?>>Relatório Geral</option>
+												<option  value="2" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '2') ? ' selected' : ''; ?>>Relatório por Empresa</option>
+												<option  value="3" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '3') ? ' selected' : ''; ?>>Relatório por E-mail</option>
+											</select>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Gerar Relatório" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+				<!-- Relatório por email-->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Relatório por e-mail de Usuário</h2>
+							</header>
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)">
+										<label for="dataInicio">Data Inicio</label>
+										<input 
+											id="dinicio" 
+											type="date" 
+											value="<?php echo (isset($_POST['data1']))?$_POST['data1']:'';?>" 
+											name ="data1" 
+											required> 
+									</div>
+									<div class="6u$ 12u$(mobile)">
+										<label for="dataFim">Data fim</label>
+										<input 
+											id="dfim" 
+											class="form-control" 
+											type="date" 
+											name ="data2" 
+											placeholder="Data Fim" 
+											value="<?php echo (isset($_POST['data2']))?$_POST['data2']:'';?>" 
+											required> 
+									</div>
+									<div class="12u$">
+										<label for="relatorio">Usuário</label>
+											<select class="form-control" id="options" name= "rel" onchange="optionCheck()" required>
+												<option  value="0" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '0') ? ' selected' : ''; ?>>Selecione alguma das opções</option>
+												<option  value="1" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '1') ? ' selected' : ''; ?>>Relatório Geral</option>
+												<option  value="2" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '2') ? ' selected' : ''; ?>>Relatório por Empresa</option>
+												<option  value="3" <?php echo (isset($_POST['rel']) and $_POST['rel'] == '3') ? ' selected' : ''; ?>>Relatório por E-mail</option>
+											</select>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Gerar Relatório" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li></li>
+					</ul>
+			</div>
+	</body>
+</html>

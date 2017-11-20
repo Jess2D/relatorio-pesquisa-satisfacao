@@ -1,5 +1,5 @@
 <?php 
-require_once("../Model/dados.php");
+require_once("../Model/dados2.php");
 include("../Views/relatorio.php");
 require_once("../Model/DAOrelatorioMediaEmpresa.php");
 

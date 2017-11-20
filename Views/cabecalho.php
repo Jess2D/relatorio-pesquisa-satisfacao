@@ -175,19 +175,19 @@
 						<div class="form-row">
 						<div  class="form-group col-md-12 "  id="hiddenDiv" style="visibility:hidden;">
 						<label for="relatorio">Empresa</label>
-								<select class="form-control" name= "empresa" >
-						   <?php   if($totalm1 > 0) {		
-								do {       
-								$empresa =  $linham1['empresa'];
-								?>
-									<option  value="<?php $linham1['empresa'];?>"><?php echo $empresa ;?></option>
-							
+							<select class="form-control" name= "empresa" >
+								<?php if($totalm1 > 0) {		
+										do {       
 								
-							<?php	
-								
-								}  
-								while($linham1 = mysqli_fetch_assoc($resultm1));?>
-								</select>
+										?>
+											<option  value="<?php echo $linham1['empresa'];?>"><?php echo  $linham1['empresa'] ;?></option>
+									
+										
+									<?php	
+										
+										}  
+										while($linham1 = mysqli_fetch_assoc($resultm1));?>
+							</select>
 
 								<?php } ?>
 						

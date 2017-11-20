@@ -11,14 +11,12 @@ session_start();
       $verifica = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'";
 
       $result = $conexão->query($verifica);
-        if($result === FALSE) { 
-          die(mysqli_error($verifica));
-        }
+      
 
          $total = mysqli_num_rows($result);
 
         if ($total<=0){
-          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.html';</script>";
+          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='../Views/login.html';</script>";
           die();
         }else{
           $_SESSION['logado'] = "SIM";

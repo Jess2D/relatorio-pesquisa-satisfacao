@@ -1,5 +1,6 @@
 <?php 
-  $conexão = mysqli_connect('localhost', 'root', '', 'test' );
+  //$conexão = mysqli_connect('localhost', 'root', '', 'test' );
+  $conexão = mysqli_connect('localhost', 'root', '', 'u276474155_pesq' );
  
   
    mysqli_set_charset($conexão, 'UTF8');
