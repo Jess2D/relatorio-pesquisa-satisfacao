@@ -96,22 +96,37 @@ require_once("../Model/DAOrelatorioMediaEmpresa.php");
 <br/>
 <h3>Sugestões </h3>
 <div class="table-responsive">
-    <table class="table table-striped table-bordered table-hover table-condensed">
+ <table class="table table-striped table-bordered table-hover table-condensed">
         <thead>
         <tr>
             <th class="active">Data</th>        
             <th class="active">Sugestão</th>
         </tr>
         </thead>
-        <?php foreach($sugestao as $dataSugestrao => $sugestaot) { ?>
-            <tr>
-                <td><?php echo $dataSugestrao; ?></td>
-                <th><?php echo $sugestaot; ?></th>     
-            </tr>
-        <?php } ?>
-          
+        <?php  
+       if($total > 0) {
+        
+        do {
+
+      ?>
+        <tr>
+            
+            <td><?php 
+                $date = date_create($linha['data']);
+                 date_format($date, 'd/m/Y');
+                 echo date_format($date, 'd/m/Y');
+            ?>
+            </td>         
+            <td><?php echo $linha['sugestoes'];?></td> 
+
+             <?php    
+        
+        } while($linha = mysqli_fetch_assoc($result));
+
+      } ?>   
+        </tr>  
        
-    </table> 
+    </table>
 </div>
  <div class="row">
         <div class="12u$">

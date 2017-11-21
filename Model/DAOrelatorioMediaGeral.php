@@ -351,7 +351,40 @@ class relatorioMediaGeral{
             return $dataFormatada;      
         }
 
-    function Sugestao($DataInicial, $DataFinal)
+
+    function result($DataInicial, $DataFinal)
+        {
+            include("../Controller/conexao.php");
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE data >= '{$DataInicial}'  AND data  <=   '{$DataFinal}';";
+
+            $resultm1 = $conexão->query($sqlM1);
+                if($resultm1 === FALSE) { 
+                    die(mysqli_error($conexão ));
+                }
+            $quantidadeRespostas = array();      
+            $linham1 = mysqli_fetch_array($resultm1);
+            $totalm1 = mysqli_num_rows($resultm1);
+            return  $resultm1;      
+        }
+
+
+    function linha($DataInicial, $DataFinal)
+        {
+            include("../Controller/conexao.php");
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE data >= '{$DataInicial}'  AND data  <=   '{$DataFinal}';";
+
+            $resultm1 = $conexão->query($sqlM1);
+                if($resultm1 === FALSE) { 
+                    die(mysqli_error($conexão ));
+                }
+            $quantidadeRespostas = array();      
+            $linham1 = mysqli_fetch_array($resultm1);
+            $totalm1 = mysqli_num_rows($resultm1);
+            return  $linham1;      
+        }
+
+
+    function total($DataInicial, $DataFinal)
         {
             include("../Controller/conexao.php");
             $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE data >= '{$DataInicial}'  AND data  <=   '{$DataFinal}';";
@@ -364,21 +397,8 @@ class relatorioMediaGeral{
             $linham1 = mysqli_fetch_array($resultm1);
             $totalm1 = mysqli_num_rows($resultm1);
 
-            if($totalm1 > 0) {		
-                do {       
-                
-                $date = date_create($linham1['data']);
-                $dataFormatada = date_format($date, 'd/m/Y');
-                
-                $quantidadeRespostas[$dataFormatada] = $linham1 ['sugestoes'];
-              } 
-                
-                while($linham1 = mysqli_fetch_assoc($resultm1));
-
-            } 
-            return $quantidadeRespostas;      
+            return$totalm1;      
         }
-
 
 
 

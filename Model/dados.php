@@ -35,8 +35,12 @@ use Dompdf\Dompdf;
     $mediaP3SuporteOnline = $relatorioMediaGeral ->MediaP3SuporteOnline($DataInicial, $DataFinal);
     $mediaP4SuporteOnline = $relatorioMediaGeral ->MediaP4SuporteOnline($DataInicial, $DataFinal);
 
-    $dataSugestao = $relatorioMediaGeral ->DataSugestao($DataInicial, $DataFinal);
-    $sugestao = $relatorioMediaGeral ->Sugestao($DataInicial, $DataFinal);
+    $linha = $relatorioMediaGeral ->linha($DataInicial, $DataFinal);
+    $result = $relatorioMediaGeral ->result($DataInicial, $DataFinal);
+    $total = $relatorioMediaGeral ->total($DataInicial, $DataFinal);
+
+    /*$dataSugestao = $relatorioMediaGeral ->DataSugestao($DataInicial, $DataFinal);
+    $sugestao = $relatorioMediaGeral ->Sugestao($DataInicial, $DataFinal);*/
 
     include("../Views/MediaGeral.php");
 

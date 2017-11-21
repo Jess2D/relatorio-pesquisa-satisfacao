@@ -357,6 +357,54 @@ class relatorioMediaGeralEmpresa{
             } 
             return $quantidadeRespostas;
         }
+    
+     function result($DataInicial, $DataFinal, $empresa)
+        {
+            include("../Controller/conexao.php");
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND empresa = '{$empresa}';";
+
+            $resultm1 = $conexão->query($sqlM1);
+                if($resultm1 === FALSE) { 
+                    die(mysqli_error($conexão ));
+                }
+            $quantidadeRespostas = array();      
+            $linham1 = mysqli_fetch_array($resultm1);
+            $totalm1 = mysqli_num_rows($resultm1);
+            return  $resultm1;      
+        }
+
+
+    function linha($DataInicial, $DataFinal, $empresa)
+        {
+            include("../Controller/conexao.php");
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND empresa = '{$empresa}';";
+
+            $resultm1 = $conexão->query($sqlM1);
+                if($resultm1 === FALSE) { 
+                    die(mysqli_error($conexão ));
+                }
+            $quantidadeRespostas = array();      
+            $linham1 = mysqli_fetch_array($resultm1);
+            $totalm1 = mysqli_num_rows($resultm1);
+            return  $linham1;      
+        }
+
+
+    function total($DataInicial, $DataFinal, $empresa)
+        {
+            include("../Controller/conexao.php");
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND empresa = '{$empresa}';";
+
+            $resultm1 = $conexão->query($sqlM1);
+                if($resultm1 === FALSE) { 
+                    die(mysqli_error($conexão ));
+                }
+            $quantidadeRespostas = array();      
+            $linham1 = mysqli_fetch_array($resultm1);
+            $totalm1 = mysqli_num_rows($resultm1);
+
+            return$totalm1;      
+        }
 
 }
 ?>

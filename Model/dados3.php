@@ -35,6 +35,11 @@
     $mediaP3SuporteOnline = $relatorioMediaEmail ->MediaP3SuporteOnline($DataInicial, $DataFinal,  $email);
     $mediaP4SuporteOnline = $relatorioMediaEmail ->MediaP4SuporteOnline($DataInicial, $DataFinal,  $email);
 
+
+    
+    $linha =  $relatorioMediaEmail ->linha($DataInicial, $DataFinal,  $email);
+    $result = $relatorioMediaEmail ->result($DataInicial, $DataFinal,  $email);
+    $total =  $relatorioMediaEmail ->total($DataInicial, $DataFinal,  $email);
     /*$dataSugestao = $relatorioMediaGeral ->DataSugestao($DataInicial, $DataFinal, $email);
     $sugestao = $relatorioMediaGeral ->Sugestao($DataInicial, $DataFinal,  $email);*/
 

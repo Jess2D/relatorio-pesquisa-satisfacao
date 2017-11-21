@@ -36,6 +36,10 @@
     $mediaP3SuporteOnline = $relatorioMediaEmpresa ->MediaP3SuporteOnline($DataInicial, $DataFinal,  $empresa);
     $mediaP4SuporteOnline = $relatorioMediaEmpresa ->MediaP4SuporteOnline($DataInicial, $DataFinal,  $empresa);
 
+
+    $linha =  $relatorioMediaEmpresa ->linha($DataInicial, $DataFinal,  $empresa);
+    $result = $relatorioMediaEmpresa ->result($DataInicial, $DataFinal,  $empresa);
+    $total =  $relatorioMediaEmpresa ->total($DataInicial, $DataFinal,  $empresa);
     /*$dataSugestao = $relatorioMediaGeral ->DataSugestao($DataInicial, $DataFinal, $empresa);
     $sugestao = $relatorioMediaGeral ->Sugestao($DataInicial, $DataFinal,  $empresa);*/
 
