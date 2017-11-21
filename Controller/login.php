@@ -20,7 +20,7 @@ session_start();
           die();
         }else{
           $_SESSION['logado'] = "SIM";
-          header("Location:../Views/relatorio.php");
+          header("Location:../Views/Top.php");
         }
     }
 ?>

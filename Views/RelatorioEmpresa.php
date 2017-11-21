@@ -54,4 +54,3 @@
 
 						</div>
 					</section>
-<?php include("../Views/Footer.php");?>

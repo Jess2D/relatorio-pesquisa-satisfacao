@@ -50,10 +50,10 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="Top.php" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
-								<li><a href="RelatorioGeral.php" id="relatorio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Relatório Geral</span></a></li>
-								<li><a href="RelatorioEmpresa.php" id="empresa-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Relatório Por Empresa</span></a></li>
-								<li><a href="RelatorioEmail.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Relatório por email</span></a></li>
+								<li><a href="../Views/Top.php" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
+								<li><a href="../Views/RelatorioGeral.php" id="relatorio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Relatório Geral</span></a></li>
+								<li><a href="../Views/RelatorioEmpresa.php" id="empresa-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Relatório Por Empresa</span></a></li>
+								<li><a href="../Views/RelatorioEmail.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Relatório por email</span></a></li>
 							</ul>
 						</nav>
 

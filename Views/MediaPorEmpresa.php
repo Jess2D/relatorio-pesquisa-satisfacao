@@ -1,100 +1,125 @@
 <?php 
 require_once("../Model/dados2.php");
-include("../Views/relatorio.php");
+include("../Views/RelatorioEmpresa.php");
 require_once("../Model/DAOrelatorioMediaEmpresa.php");
 
 ?>
-<div class="tabelas">
-  <br/> 
-  <h4>Empresa: <span style="color:#6E7B8B"> <b><?php echo " ".$empresa ?></b></span></h4>
-  <h4>Periodo: <span style="color:#6E7B8B"> <b><?php echo " ".$DataInicio ?></b> a <b><?php echo " ".$DataFim ?></b></span></h4>
-  <h4>Quantidade de Respostas: <span style="color:#6E7B8B"><?php echo " ".$quantidade?></span></h4>
+<div class="tabelas2">
+<div class="container ">
+      
+  
 
-
-
-   <div class="row">
-
-        <div class="col-sm-12 pes-titulo-secao">
-            <h3>Atendimento por telefone</h3>
-        </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Competência dos funcionários: <span style="color:#6E7B8B"><?php echo $mediaP1AtendimentoTel ?></span></h4>
-        </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Confiabilidade e clareza das informações: <span style="color:#6E7B8B"><?php echo $mediaP2AtendimentoTel ?></span></h4>
-                       
-         </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Cumprimento de horários e prazos: <span style="color:#6E7B8B"><?php echo $mediaP3AtendimentoTel ?></span></h4>
-                       
-        </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Cordialidade do atendimento: <span style="color:#6E7B8B"><?php echo $mediaP3AtendimentoTel ?></span></h4>
-                       
-        </div>
-
-
-
-        <div class="col-sm-12 pes-titulo-secao">
-            <h3>Atendimento Presencial </h3>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Aparência dos Funcionários: <span style="color:#6E7B8B"><?php echo $mediaP1AtendimentoPresen  ?></span></h4>
-         </div>
-
-         <div class="col-xs-12 col-sm-6">
-                        <h4>Média Tempo gasto para resolver o problema: <span style="color:#6E7B8B"><?php echo $mediaP2AtendimentoPresen  ?></span></h4>
-                       
-         </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Competência dos funcionários: <span style="color:#6E7B8B"><?php echo $mediaP3AtendimentoPresen  ?></span></h4>
-                    
-         </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Confiabilidade e clareza das informações: <span style="color:#6E7B8B"><?php echo $mediaP4AtendimentoPresen  ?></span></h4>
-                        
-        </div>
-
-
-    
-        <div class="col-sm-12 pes-titulo-secao">
-            <h3>Suporte Online</h3>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Cumprimento de horários e prazos: <span style="color:#6E7B8B"><?php echo  $mediaP1SuporteOnline  ?></span></h4>
-                       
-         </div>
-
-         <div class="col-xs-12 col-sm-6">
-                        <h4>Média Aspecto Visual do Suporte: <span style="color:#6E7B8B"><?php echo  $mediaP2SuporteOnline  ?></span></h4>
-                        
-         </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Funcionalidade do Sistema:<span style="color:#6E7B8B"><?php echo  $mediaP3SuporteOnline  ?></span></h4>
-                      
-         </div>
-
-        <div class="col-xs-12 col-sm-6">
-                        <h4>Média Facilidade no acesso: <span style="color:#6E7B8B"><?php echo $mediaP4SuporteOnline  ?></span></h4>
-                      
-        </div>
-
-
-
-        <div class="col-sm-12 pes-titulo-secao">
-            <h3>Sugestões</h3>
-        </div>
-        <div class="col-xs-12 col-sm-6 well well-sm">
-                        <h4>Data: <span style="color:#6E7B8B"> 01/01/2017</span></h4>
-                        <h4>Sugestão: <span style="color:#6E7B8B"> wefgwewrgarwegearg</span></h4>
-         </div>
-        </div>
+  	<div class="row">
+		<div class="10u 12u$(mobile)">
+			
+            <h3><b>EMPRESA: </b><span style="color:#6E7B8B"> <b><?php echo " ".$empresa ?></b></span></h3>
+            <h3>PERIODO: <span style="color:#6E7B8B"> <b><?php echo " ".$DataInicio ?></b> a <b><?php echo " ".$DataFim ?></b></span></h3>
+            <h3>QUANTIDADE DE RESPOSTAS: <span style="color:#6E7B8B"><?php echo " ".$quantidade?></span></h3>
+            <br/>
+				
+		</div>
+		<div class="2u$ 12u$(mobile)">
+			<img src='../assets/img/alldoc.jpg' id='relatorio-logo' alt='Logo Alldoc'>
+										 
+		</div>
     </div>
-<?php  include("../Views/rodape.php"); ?>
+   <h3>Média de atendimento por Telefone</h3>
+   
+   <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr>
+                  
+            <th class="active">Competência dos funcionários</th>
+            <th class="active">Confiabilidade e clareza das informações</th>
+            <th class="active">Cumprimento de horários e prazos</th>
+            <th class="active">Cordialidade do atendimento</th>
+        </tr>  
+        <tr>
+            
+            <td><?php echo $mediaP1AtendimentoTel; ?></td>
+            <td><?php echo $mediaP2AtendimentoTel; ?></td>
+            <td><?php echo $mediaP3AtendimentoTel; ?></td>
+            <td><?php echo $mediaP4AtendimentoTel; ?></td>
+         </tr> 
+    </table> 
+</div>
+
+    <br/>
+    <br/>
+
+
+    <h3>Média de atendimento Presencial</h3>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr>
+            
+            <th class="active">Aparência dos Funcionários</th>
+            <th class="active">Tempo gasto para resolver o problema</th>
+            <th class="active">Competência dos funcionários</th>
+            <th class="active">Confiabilidade e clareza das informações</th>
+        </tr>
+
+        <tr>
+            
+            <td><?php echo $mediaP1AtendimentoPresen; ?></td>
+            <td><?php echo $mediaP2AtendimentoPresen; ?></td>
+            <td><?php echo $mediaP3AtendimentoPresen; ?></td>
+            <td><?php echo $mediaP4AtendimentoPresen; ?></td>
+        </tr> 
+    </table> 
+ </div>
+
+  <br/>
+    <br/>
+
+
+<h3>Média de Suporte Online</h3>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr>
+                 
+            <th class="active">Cumprimento de horários e prazos</th>
+            <th class="active">Aspecto Visual do Suporte</th>
+            <th class="active">Funcionalidade do Sistema</th>
+            <th class="active">Facilidade no acesso</th>
+        </tr>
+        <tr>
+           
+            <td><?php echo $mediaP1SuporteOnline; ?></td>
+            <td><?php echo $mediaP2SuporteOnline; ?></td>
+            <td><?php echo $mediaP3SuporteOnline; ?></td>
+            <td><?php echo $mediaP4SuporteOnline; ?></td>
+        </tr> 
+    </table> 
+ </div>
+<br/>
+<br/>
+<h3>Sugestões </h3>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <thead>
+        <tr>
+            <th class="active">Data</th>        
+            <th class="active">Sugestão</th>
+        </tr>
+        </thead>
+        <?php foreach($sugestao as $dataSugestrao => $sugestaot) { ?>
+            <tr>
+                <td><?php echo $dataSugestrao; ?></td>
+                <th><?php echo $sugestaot; ?></th>     
+            </tr>
+        <?php } ?>
+          
+       
+    </table> 
+</div>
+ <div class="row">
+        <div class="12u$">
+			<input type="button" class="Imprimir Relatório" value="Imprimir" />
+		</div>
+    </div>
+</div>
+   
+<br/>
+</div>
+<?php include("../Views/Footer.php");?>

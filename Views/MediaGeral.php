@@ -1,10 +1,12 @@
 <?php 
 require_once("../Model/dados.php");
-include("../Views/relatorio.php");
+include("../Views/RelatorioGeral.php");
 require_once("../Model/DAOrelatorioMediaGeral.php");
 ?>
-<div class="tabelas">
-   <h2>Média de atendimento por Telefone</h2>
+
+<div class="tabelas ">
+<div class="container ">
+   <h3>Média de atendimento por Telefone</h3>
    
    <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover table-condensed">
@@ -29,7 +31,7 @@ require_once("../Model/DAOrelatorioMediaGeral.php");
     <br/>
 
 
-    <h2>Média de atendimento Presencial</h2>
+    <h3>Média de atendimento Presencial</h3>
     <div class="table-responsive">
       <table class="table table-striped table-bordered table-hover table-condensed">
         <tr>
@@ -54,7 +56,7 @@ require_once("../Model/DAOrelatorioMediaGeral.php");
     <br/>
 
 
-<h2>Média de Suporte Online</h2>
+<h3>Média de Suporte Online</h3>
 <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover table-condensed">
         <tr>
@@ -75,7 +77,7 @@ require_once("../Model/DAOrelatorioMediaGeral.php");
  </div>
 <br/>
 <br/>
-<h2>Sugestões </h2>
+<h3>Sugestões </h3>
 <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover table-condensed">
         <thead>
@@ -94,5 +96,13 @@ require_once("../Model/DAOrelatorioMediaGeral.php");
        
     </table> 
 </div>
+ <div class="row">
+        <div class="12u$">
+			<input type="button" class="Imprimir Relatório" value="Imprimir" />
+		</div>
+    </div>
 </div>
-<?php  include("../Views/rodape.php"); ?>
+   
+<br/>
+</div>
+<?php include("../Views/Footer.php");?>

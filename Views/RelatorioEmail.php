@@ -7,7 +7,7 @@
 								<h2>Relatório por e-mail de Usuário</h2>
 							</header>
 
-							<form method="post" action="#">
+							<form method="post" action="../Model/dados3.php">
 								<div class="row">
 									<div class="6u 12u$(mobile)">
 										<label for="dataInicio">Data Inicio</label>
@@ -55,4 +55,3 @@
 
 						</div>
 					</section>
-<?php include("../Views/Footer.php");?>
