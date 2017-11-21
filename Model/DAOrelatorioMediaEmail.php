@@ -361,7 +361,7 @@ class relatorioMediaGeralEmail{
          function result($DataInicial, $DataFinal, $email)
         {
             include("../Controller/conexao.php");
-            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND empresa = '{$email}';";
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND email = '{$email}';";
 
             $resultm1 = $conexão->query($sqlM1);
                 if($resultm1 === FALSE) { 
@@ -377,7 +377,7 @@ class relatorioMediaGeralEmail{
     function linha($DataInicial, $DataFinal, $email)
         {
             include("../Controller/conexao.php");
-            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND empresa = '{$email}';";
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND email = '{$email}';";
 
             $resultm1 = $conexão->query($sqlM1);
                 if($resultm1 === FALSE) { 
@@ -393,7 +393,7 @@ class relatorioMediaGeralEmail{
     function total($DataInicial, $DataFinal, $email)
         {
             include("../Controller/conexao.php");
-            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND empresa = '{$email}';";
+            $sqlM1 = "SELECT data, sugestoes FROM pesquisa WHERE (data >= '{$DataInicial}'  AND data  <=  '{$DataFinal}') AND email = '{$email}';";
 
             $resultm1 = $conexão->query($sqlM1);
                 if($resultm1 === FALSE) { 
